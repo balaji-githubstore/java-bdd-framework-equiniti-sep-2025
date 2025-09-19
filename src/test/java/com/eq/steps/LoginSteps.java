@@ -1,9 +1,5 @@
 package com.eq.steps;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import com.eq.hooks.AutomationHooks;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
