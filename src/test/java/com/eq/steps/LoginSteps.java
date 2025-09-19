@@ -1,5 +1,9 @@
 package com.eq.steps;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.eq.hooks.AutomationHooks;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,7 +12,7 @@ public class LoginSteps {
 
 	@Given("User have browser with github home page")
 	public void user_have_browser_with_github_home_page() {
-		System.out.println("given");
+		
 	}
 
 	@When("User enter username as {string}")
