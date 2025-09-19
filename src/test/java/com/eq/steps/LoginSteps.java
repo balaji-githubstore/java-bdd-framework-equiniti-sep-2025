@@ -1,14 +1,27 @@
 package com.eq.steps;
 
+import com.eq.pages.HomePage;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
+	
+	private final HomePage home;
+	public LoginSteps(HomePage home)
+	{
+		this.home=home;
+	}
 
 	@Given("User have browser with github home page")
 	public void user_have_browser_with_github_home_page() {
-		
+		home.navigateToUrl();
+	}
+	
+	@When("User click on sign in from homepage")
+	public void user_click_on_sign_in_from_homepage() {
+	    home.clickOnSignIn();
 	}
 
 	@When("User enter username as {string}")

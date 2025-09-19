@@ -7,7 +7,7 @@
 	<version>1.0</version>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -25,7 +25,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.35.0</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>7.28.2</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
