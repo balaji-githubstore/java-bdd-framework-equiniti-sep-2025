@@ -1,6 +1,9 @@
 package com.eq.steps;
 
+import org.testng.Assert;
+
 import com.eq.pages.HomePage;
+import com.eq.pages.LoginPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,9 +12,12 @@ import io.cucumber.java.en.When;
 public class LoginSteps {
 	
 	private final HomePage home;
-	public LoginSteps(HomePage home)
+	private final LoginPage login;
+	
+	public LoginSteps(HomePage home,LoginPage login)
 	{
 		this.home=home;
+		this.login=login;
 	}
 
 	@Given("User have browser with github home page")
@@ -26,17 +32,17 @@ public class LoginSteps {
 
 	@When("User enter username as {string}")
 	public void user_enter_username_as(String username) {
-		System.out.println("when" + username);
+		login.enterUsername(username);
 	}
 
 	@When("User enter password as {string}")
 	public void user_enter_password_as(String password) {
-		System.out.println("when" + password);
+		login.enterPassword(password);
 	}
 
 	@When("User click on Sign in")
 	public void user_click_on_sign_in() {
-		System.out.println("when login");
+		login.clickOnSignIn();
 	}
 
 	@Then("User should gets access to dashboard with header as {string}")
@@ -46,7 +52,10 @@ public class LoginSteps {
 	
 	@Then("User should not get access with error as {string}")
 	public void user_should_not_get_access_with_error_as(String expectedError) {
-	   System.out.println("then"+expectedError);
+	   String actualError= login.getInvalidErrorMessage();
+	   Assert.assertEquals(actualError, expectedError);
+	   
+//	   Assert.assertTrue(actualError.contains(expectedError));  //expects true
 	}
 
 }
