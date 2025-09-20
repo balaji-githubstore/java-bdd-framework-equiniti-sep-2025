@@ -44,9 +44,9 @@ Selenium WebDriver basics such as:
 
 | Branch | Description |
 |--------|-------------|
-| `master` | ✅ Use for Final Caption Project. Full BDD implementation using: <br>• Cucumber + Gherkin <br>• Step Definitions <br>• Selenium integration with Hooks |
+| `master` | ✅ ✅ Final code done in the sessionUse for Final Caption Project |
 | `b1-no-automation` | 🧪 Basic BDD structure only – Feature files without automation |
-| `b2-final-new-code` | ✅ Final code done in the session |
+| `b2-final-new-code` | ✅ Updated code with properties files |
 
 ---
 
